@@ -1,0 +1,143 @@
+Id;continent;description;pop;lifeExp;gdpPercap
+Afghanistan;Asia;Asia;31889923;43.828;974.5803384
+Albania;Europe;Europe;3600523;76.423;5937.029526
+Algeria;Africa;Africa 1;33333216;72.301;6223.367465
+Angola;Africa;Africa 2;12420476;42.731;4797.231267
+Argentina;Americas;Americas;40301927;75.32;12779.37964
+Australia;Oceania;Oceania;20434176;81.235;34435.36744
+Austria;Europe;Europe;8199783;79.829;36126.4927
+Bahrain;Asia;Asia;708573;75.635;29796.04834
+Bangladesh;Asia;Asia;150448339;64.062;1391.253792
+Belgium;Europe;Europe;10392226;79.441;33692.60508
+Benin;Africa;Africa 5;8078314;56.728;1441.284873
+Bolivia;Americas;Americas;9119152;65.554;3822.137084
+Bosnia and Herzegovina;Europe;Europe;4552198;74.852;7446.298803
+Botswana;Africa;continent ;1639131;50.728;12569.85177
+Brazil;Americas;Americas;190010647;72.39;9065.800825
+Bulgaria;Europe;Europe;7322858;73.005;10680.79282
+Burkina Faso;Africa;Africa 4;14326203;52.295;1217.032994
+Burundi;Africa;un ;8390505;49.58;430.0706916
+Cambodia;Asia;Asia;14131858;59.723;1713.778686
+Cameroon;Africa;Africa;17696293;50.43;2042.09524
+Canada;Americas;Americas;33390141;80.653;36319.23501
+Central African Republic;Africa;Africa;4369038;44.741;706.016537
+Chad;Africa;Africa;10238807;50.651;1704.063724
+Chile;Americas;Americas;16284741;78.553;13171.63885
+China;Asia;Asia;1318683096;72.961;4959.114854
+Colombia;Americas;Americas;44227550;72.889;7006.580419
+Comoros;Africa;continent ;710960;65.152;986.1478792
+Congo   Dem. Rep.;Africa;Africa;;46.462;277.5518587
+Congo  Rep.;Africa;Africa;;55.322;3632.557798
+Costa Rica;Americas;Americas;4133884;78.782;9645.06142
+Cote d'Ivoire;Africa;Africa;18013409;48.328;1544.750112
+Croatia;Europe;Europe;4493312;75.748;14619.22272
+Cuba;Americas;Americas;11416987;78.273;8948.102923
+Czech Republic;Europe;Europe;10228744;76.486;22833.30851
+Denmark;Europe;Europe;5468120;78.332;35278.41874
+Djibouti;Africa;continent ;496374;54.791;2082.481567
+Dominican Republic;Americas;Americas;9319622;72.235;6025.374752
+Ecuador;Americas;Americas;13755680;74.994;6873.262326
+Egypt;Africa;Africa 1;80264543;71.338;5581.180998
+El Salvador;Americas;Africa 2;6939688;71.878;5728.353514
+Equatorial Guinea;Africa;Africa 5;551201;51.579;12154.08975
+Eritrea;Africa;Africa 3;4906585;58.04;641.3695236
+Ethiopia;Africa;Africa 4;76511887;52.947;690.8055759
+Finland;Europe;Europe;5238460;79.313;33207.0844
+France;Europe;Europe;61083916;80.657;30470.0167
+Gabon;Africa;Africa;1454867;56.735;13206.48452
+Gambia;Africa;un ;1688359;59.448;752.7497265
+Germany;Europe;Europe;82400996;79.406;32170.37442
+Ghana;Africa;Africa;22873338;60.022;1327.60891
+Greece;Europe;Europe;10706290;79.483;27538.41188
+Guatemala;Americas;Americas;12572928;70.259;5186.050003
+Guinea;Africa;un ;9947814;56.007;942.6542111
+Guinea-Bissau;Africa;Africa;1472041;46.388;579.231743
+Haiti;Americas;Americas;8502814;60.916;1201.637154
+Honduras;Americas;Americas;7483763;70.198;3548.330846
+Hong Kong;Asia;Asia;6980412;82.208;39724.97867
+Hungary;Europe;Europe;9956108;73.338;18008.94444
+Iceland;Europe;Europe;301931;81.757;36180.78919
+India;Asia;Asia;1110396331;64.698;2452.210407
+Indonesia;Asia;Asia;223547000;70.65;3540.651564
+Iran;Asia;Asia;69453570;70.964;11605.71449
+Iraq;Asia;Asia;27499638;59.545;4471.061906
+Ireland;Europe;Europe;4109086;78.885;40675.99635
+Israel;Asia;Asia;6426679;80.745;25523.2771
+Italy;Europe;Europe;58147733;80.546;28569.7197
+Jamaica;Americas;Americas;2780132;72.567;7320.880262
+Japan;Asia;Asia;127467972;82.603;31656.06806
+Jordan;Asia;Asia;6053193;72.535;4519.461171
+Kenya;Africa;Africa;35610177;54.11;1463.249282
+Korea  Dem. Rep.;Asia;Asia;23301725;67.297;1593.06548
+Korea  Rep.;Asia;Asia;49044790;78.623;23348.13973
+Kuwait;Asia;Asia;2505559;77.588;47306.98978
+Lebanon;Asia;Asia;3921278;71.993;10461.05868
+Lesotho;Africa;un ;2012649;42.592;1569.331442
+Liberia;Africa;continent ;3193942;45.678;414.5073415
+Libya;Africa;Africa;6036914;73.952;12057.49928
+Madagascar;Africa;un ;19167654;59.443;1044.770126
+Malawi;Africa;Africa 1;13327079;48.303;759.3499101
+Malaysia;Asia;Africa 2;24821286;74.241;12451.6558
+Mali;Africa;Africa 5;12031795;54.467;1042.581557
+Mauritania;Africa;Africa 3;3270065;64.164;1803.151496
+Mauritius;Africa;Africa 4;1250882;72.801;10956.99112
+Mexico;Americas;Americas;108700891;76.195;11977.57496
+Mongolia;Asia;Asia;2874127;66.803;3095.772271
+Montenegro;Europe;Europe;684736;74.543;9253.896111
+Morocco;Africa;un ;33757175;71.164;3820.17523
+Mozambique;Africa;Africa;19951656;42.082;823.6856205
+Myanmar;Asia;Asia;47761980;62.069;944
+Namibia;Africa;Africa 1;2055080;52.906;4811.060429
+Nepal;Asia;Africa 2;28901790;63.785;1091.359778
+Netherlands;Europe;Africa 5;16570613;79.762;36797.93332
+New Zealand;Oceania;Africa 3;4115771;80.204;25185.00911
+Nicaragua;Americas;Africa 4;5675356;72.899;2749.320965
+Niger;Africa;Africa;12894865;56.867;619.6768924
+Nigeria;Africa;un ;135031164;46.859;2013.977305
+Norway;Europe;Europe;4627926;80.196;49357.19017
+Oman;Asia;Asia;3204897;75.64;22316.19287
+Pakistan;Asia;Asia;169270617;65.483;2605.94758
+Panama;Americas;Americas;3242173;75.537;9809.185636
+Paraguay;Americas;Americas;6667147;71.752;4172.838464
+Peru;Americas;Americas;28674757;71.421;7408.905561
+Philippines;Asia;Asia;91077287;71.688;3190.481016
+Poland;Europe;Europe;38518241;75.563;15389.92468
+Portugal;Europe;Europe;10642836;78.098;20509.64777
+Puerto Rico;Americas;Americas;3942491;78.746;19328.70901
+Reunion;Africa;Africa;798094;76.442;7670.122558
+Romania;Europe;Europe;22276056;72.476;10808.47561
+Rwanda;Africa;Africa;8860588;46.242;863.0884639
+Sao Tome and Principe;Africa;continent ;199579;65.528;1598.435089
+Saudi Arabia;Asia;Asia;27601038;72.777;21654.83194
+Senegal;Africa;Africa;12267493;63.062;1712.472136
+Serbia;Europe;Europe;10150265;74.002;9786.534714
+Sierra Leone;Africa;Africa 1;6144562;42.568;862.5407561
+Singapore;Asia;Africa 2;4553009;79.972;47143.17964
+Slovak Republic;Europe;Africa 5;5447502;74.663;18678.31435
+Slovenia;Europe;Africa 3;2009245;77.926;25768.25759
+Somalia;Africa;Africa 4;9118773;48.159;926.1410683
+South Africa;Africa;Africa;43997828;49.339;9269.657808
+Spain;Europe;Europe;40448191;80.941;28821.0637
+Sri Lanka;Asia;Asia;20378239;72.396;3970.095407
+Sudan;Africa;Africa;42292929;58.556;2602.394995
+Swaziland;Africa;continent ;1133066;39.613;4513.480643
+Sweden;Europe;Europe;9031088;80.884;33859.74835
+Switzerland;Europe;Europe;7554661;81.701;37506.41907
+Syria;Asia;Asia;19314747;74.143;4184.548089
+Taiwan;Asia;Asia;23174294;78.4;28718.27684
+Tanzania;Africa;Africa;38139640;52.517;1107.482182
+Thailand;Asia;Asia;65068149;70.616;7458.396327
+Togo;Africa;Africa 1;5701579;58.42;882.9699438
+Trinidad and Tobago;Americas;Africa 2;1056608;69.819;18008.50924
+Tunisia;Africa;Africa 5;10276158;73.923;7092.923025
+Turkey;Europe;Africa 3;71158647;71.777;8458.276384
+Uganda;Africa;Africa 4;29170398;51.542;1056.380121
+United Kingdom;Europe;Europe;60776238;79.425;33203.26128
+United States;Americas;Americas;301139947;78.242;42951.65309
+Uruguay;Americas;Americas;3447496;76.384;10611.46299
+Venezuela;Americas;Americas;26084662;73.747;11415.80569
+Vietnam;Asia;Asia;85262356;74.249;2441.576404
+West Bank and Gaza;Asia;Asia;4018332;73.422;3025.349798
+Yemen;Asia;Asia;22211743;62.698;2280.769906
+Zambia;Africa;continent ;11746035;42.384;1271.211593
+Zimbabwe;Africa;un ;12311143;43.487;469.7092981
