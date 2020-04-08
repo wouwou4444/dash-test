@@ -47,18 +47,38 @@ def update_output(value,options):
     return ('You have selected "{} {}"'.format(value,options),
             json.dumps(hidden))
             
-
-
-
 @app.callback(
     Output('table-paging-with-graph', "data"),
     [Input('table-paging-with-graph', "page_current"),
      Input('table-paging-with-graph', "page_size"),
      Input('table-paging-with-graph', "sort_by"),
+     Input('dataframe-hidden-value', 'children')]
+)
+def update_table(page_current, page_size, sort_by, dataframe):
+    dff = pd.read_json(dataframe, orient = 'split')
+    
+    if len(sort_by):
+        dff = dff.sort_values(
+            [col['column_id'] for col in sort_by],
+            ascending=[
+                col['direction'] == 'asc'
+                for col in sort_by
+            ],
+            inplace=False
+        )
+            
+    return dff.iloc[ 
+        page_current*page_size: (page_current + 1)*page_size
+    ].to_dict('records')
+
+
+@app.callback(
+    Output('dataframe-hidden-value', "children"),
+    [
      Input('dropdown-up', 'value')
      ])
 
-def update_table(page_current, page_size, sort_by, value):
+def update_hidden_dataframe(value):
 
     dff = dash_section.df
     print("in update_table(1), {}, value: {}".format(type(value),value))
@@ -80,20 +100,7 @@ def update_table(page_current, page_size, sort_by, value):
                 # only works with complete fields in standard format
                 dff = dff.loc[dff[col_name].str.startswith(filter_value)]
 
-
-        if len(sort_by):
-            dff = dff.sort_values(
-                [col['column_id'] for col in sort_by],
-                ascending=[
-                    col['direction'] == 'asc'
-                    for col in sort_by
-                ],
-                inplace=False
-            )
-
-    return dff.iloc[ 
-        page_current*page_size: (page_current + 1)*page_size
-    ].to_dict('records')
+    return dff.to_json(date_format='iso', orient='split')
 
 @app.callback(
     [Output('dropdown-up', 'options'),Output('dropdown-up', 'value')],

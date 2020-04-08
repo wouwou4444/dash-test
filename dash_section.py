@@ -145,14 +145,16 @@ alert1 = html.Div(
 
 # Hidden div inside the app that stores the intermediate value
 hidden = html.Div(id='filter-hidden-value')#, style={'display': 'none'})
-    
+hidden_dataframe = html.Div(id='dataframe-hidden-value')#, style={'display': 'none'})
+
 alerts2 = dbc.Container(
     [
         row,
         alert,
         filter_entry_bar,
         alert1,
-        hidden
+        hidden,
+        hidden_dataframe
     ], 
     style={'margin': 10}
 )
