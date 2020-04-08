@@ -10,19 +10,95 @@ import dash_table
 
 import pandas as pd
 
+operators = [['ge ', '>='],
+             ['le ', '<='],
+             ['lt ', '<'],
+             ['gt ', '>'],
+             ['ne ', '!='],
+             ['eq ', '='],
+             ['contains '],
+             ['datestartswith ']]
+
 df = pd.read_csv('./gapminder2007.csv',sep=";")
 
 alert = html.Div(
     [
-        dbc.Row(dbc.Col(html.Div("Hello Bootstrap!"), width = 12)),
+        dbc.Alert("Filters applied", color ="success"),
         dbc.Row(
             [
-                dbc.Col(html.Div("Hello Second time!")),
-                dbc.Col(html.Div("Hello third time!"))
+                dbc.Col(dbc.Alert("Column Name", color = "primary")),
+                dbc.Col(dbc.Alert("Operator", color = "primary")),
+                dbc.Col(dbc.Alert("value", color = "primary"))
             ]
         )
     ]
 )
+
+row = html.Div(
+    [
+        dbc.Row(dbc.Col(html.Div("Application Dash"))),
+        dbc.Row(
+            [
+                dbc.Col(html.Div("One of three columns"), align="center"),
+                dbc.Col(html.Div("One of three columns")),
+                dbc.Col(html.Div("One of three columns"))
+            ]
+        )
+    ]
+)
+
+
+################
+
+filter_entry_bar = html.Div(
+
+    children=[
+
+        dbc.Row([
+
+            dbc.Col(
+                dcc.Dropdown(id = 'filter-column-selection',
+                             options = [
+                                 {'label': column, 'value': column} for column in df.columns
+                             ],
+                             multi=False,
+                             placeholder="Select a column on which to filter"
+                                )
+                   ),
+            dbc.Col(
+                dcc.Dropdown(id = 'filter-operator-selection',
+                             options = [
+                                 {'label': op[0], 'value': op[0]} for op in operators
+                             ],
+                             multi=False,
+                             placeholder="Select the type of filter"
+                                )
+                   ),
+            dbc.Col(
+                dbc.Input(id = "filter-value-selection",
+                     placeholder="Enter a value here")
+            )
+        ],
+        id='filter-entry-container'
+        ),
+        dbc.Row(
+            dbc.Col(
+                dbc.Button("Filter", 
+                           color = "primary", 
+                           className="mr-1", 
+                           block=True,
+                           id = "filter-button-selection"),
+                width=6,
+                align="center"
+            ),
+            justify="center"
+        ),
+        html.Div(id="filter-output-selection")
+        
+    ]
+)
+
+##############
 
 alert1 = html.Div(
 
@@ -31,14 +107,7 @@ alert1 = html.Div(
         dbc.Row([
 
             dbc.Col(dcc.Dropdown(id = 'dropdown-up',
-                            options=[  
-                                
-                                     {'label': 'New York City', 'value': 'NYC'},
-                                        {'label': 'Montreal', 'value': 'MTL'},
-                                        {'label': 'San Francisco', 'value': 'SF'},
-                                    ],
-                            value= [] ,
-                            multi=True
+                                 multi=True
                         )
 
                    )],
@@ -74,23 +143,23 @@ alert1 = html.Div(
     ]
 )
 
+# Hidden div inside the app that stores the intermediate value
+hidden = html.Div(id='filter-hidden-value')#, style={'display': 'none'})
+    
 alerts2 = dbc.Container(
     [
+        row,
         alert,
-        alert1
-    ],
-    className="p-5"
+        filter_entry_bar,
+        alert1,
+        hidden
+    ], 
+    style={'margin': 10}
 )
 
+
 # Function Helper
-operators = [['ge ', '>='],
-             ['le ', '<='],
-             ['lt ', '<'],
-             ['gt ', '>'],
-             ['ne ', '!='],
-             ['eq ', '='],
-             ['contains '],
-             ['datestartswith ']]
+
 
 def split_filter_part(filter_part):
     for operator_type in operators:
