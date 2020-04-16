@@ -10,6 +10,8 @@ import dash_table
 
 import pandas as pd
 
+import plotly.graph_objs as go
+
 operators = [['ge ', '>='],
              ['le ', '<='],
              ['lt ', '<'],

@@ -14,6 +14,8 @@ from dash_section import split_filter_part
 import json
 import numpy as np
 
+import plotly.graph_objs as go
+
 BS = "https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css"
 BS = "dbc.themes.BOOTSTRAP"
 
