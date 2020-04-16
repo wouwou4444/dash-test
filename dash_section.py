@@ -19,6 +19,12 @@ operators = [['ge ', '>='],
              ['contains '],
              ['datestartswith ']]
 
+algos = [
+    "k-means",
+    "SGD",
+    "HCL",
+    "DBSCAN"
+]
 df = pd.read_csv('./gapminder2007.csv',sep=";")
 
 alert = html.Div(
@@ -47,7 +53,12 @@ row = html.Div(
     ]
 )
 
-
+graph = dcc.Graph(
+    id="graph1",
+    figure = {
+        'data' : {'x': df['pop'], 'y': df['lifeExp' ], 'type': 'scatter'}
+    }
+)
 ################
 
 filter_entry_bar = html.Div(
@@ -99,7 +110,57 @@ filter_entry_bar = html.Div(
 )
 
 ##############
+################
 
+algo_entry_bar = dbc.Container(html.Div(
+
+    children=[
+
+        dbc.Row([
+
+            dbc.Col(
+                dcc.Dropdown(id = 'algo-column-selection',
+                             options = [
+                                 {'label': column, 'value': column} for column in df.columns
+                             ],
+                             multi=True,
+                             placeholder="Select a column on which to filter"
+                                )
+                   ),
+            dbc.Col(
+                dcc.Dropdown(id = 'algo-type-selection',
+                             options = [
+                                 {'label': algo, 'value': algo} for algo in algos
+                             ],
+                             multi=False,
+                             placeholder="Select the type of filter"
+                                )
+                   ),
+            dbc.Col(
+                dbc.Input(id = "algo-cluster-selection",
+                     placeholder="Enter a value here")
+            )
+        ],
+        id='algo-entry-container'
+        ),
+        dbc.Row(
+            dbc.Col(
+                dbc.Button("Run Clustering", 
+                           color = "primary", 
+                           className="mr-1", 
+                           block=True,
+                           id = "algo-button-selection"),
+                width=6,
+                align="center"
+            ),
+            justify="center"
+        ),
+        html.Div(id="algo-output-selection")
+        
+    ]
+))
+
+##############
 alert1 = html.Div(
 
     children=[
@@ -154,7 +215,8 @@ alerts2 = dbc.Container(
         filter_entry_bar,
         alert1,
         hidden,
-        hidden_dataframe
+        hidden_dataframe,
+        algo_entry_bar
     ], 
     style={'margin': 10}
 )

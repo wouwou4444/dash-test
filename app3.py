@@ -12,6 +12,7 @@ import dash_section
 from dash_section import split_filter_part
 
 import json
+import numpy as np
 
 BS = "https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css"
 BS = "dbc.themes.BOOTSTRAP"
@@ -139,33 +140,33 @@ def update_dropdown_2(n_clicks, column, operator, value, previous_dropdown_optio
 
 
 
+@app.callback(
+    [Output('algo-output-selection', 'children')],
+    [Input('algo-button-selection', "n_clicks")],
+    [State('algo-column-selection', "value"),
+     State('algo-type-selection', "value"),
+     State('algo-cluster-selection', "value"),
+     State('dataframe-hidden-value','children')]
+)
 
-"""@app.callback(
-    [Output('dropdown-up', 'options'),Output('dropdown-up', 'value')],
-    [Input('table-paging-with-graph', "filter_query")
-    ])
+def update_dataframe_algo(n_clicks, column, algo_type, value, dataframe ):
+    print("in update_dataframe_algo: {}".format(column))
+    print("in update_dataframe_algo: {}".format(algo_type))
+    print("in update_dataframe_algo: {}".format(value))
+    print("in update_dataframe_algo: {}".format(n_clicks))
+    print("in update_dataframe_algo: {}".format(dataframe))
+    str_output = '{} {} {}'.format(column, algo_type, value)
+    #return ([{'label': str_output, 'value': str_output}],
+            #[str_output])
+    if n_clicks:
+        dff = pd.read_json(dataframe, orient = 'split')
+        dff["cluster_id"] = np.random.randint(0, int(value), dff.shape[0])
+        print("in update_dataframe_algo(23): {}".format(str_output))
 
-def update_dropdown(filter):
-    print("in update_dropdown filter {}, value: {}".format(type(filter),filter))
-    filtering_expressions = filter.split(' && ')
+        return ([str_output + dff.to_json(date_format='iso', orient='split')])
+    else:
+        return [""]
 
-    col_name_list = []
-    filter_list = []
-    operator_list = []
-    for filter_part in filtering_expressions:
-        print("in update_dropdown {}".format((filter_part)))
-        col_name,operator,filter_value = split_filter_part(filter_part)
-        print("in update_dropdown {}".format(type(filter_value)))
-
-        col_name_list.append(col_name)
-        filter_list.append(filter_value)
-        operator_list.append(operator)
-       
-        test = [{"label":str(col_name) +" " + str(operator) +" " + str(filter), "value": str(col_name) +" " + str(operator) +" " + str(filter)} for col_name, operator, filter in zip(col_name_list,operator_list, filter_list)]
-        value = [filter['label'] for filter in test]
-        print("in update_dropdown test var {}".format(type(test)))
-    return test , value
-"""
 
 if __name__ == "__main__":
-    app.run_server()
+    app.run_server(debug = True)
